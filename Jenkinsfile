@@ -1,8 +1,8 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:lts'
-        }
+    agent any
+      tools {
+        maven 'recentNode' 
+      }
     }
     stages {
         stage('Build') {
